@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user id="" nom="" email="" Cne="" isAdmin=""></user>
+</users>
+
+<semisters>
+    <S1 idSemester=""></S1>
+</semisters>
+
+<Modules>
+    <Module idSemister="">
+        <noteModule idEtud="" abs="" noteOr="" noteRat=""></noteModule>
+    </Module>
+</Modules>
