@@ -1,14 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<users>
-    <user id="" nom="" email="" Cne="" isAdmin=""></user>
-</users>
 
-<semisters>
-    <S1 idSemester=""></S1>
-</semisters>
-
-<Modules>
-    <Module idSemister="">
-        <noteModule idEtud="" abs="" noteOr="" noteRat=""></noteModule>
-    </Module>
-</Modules>
+<root>
+	<admins>
+		<admin>
+			<id>1</id>
+			<password>abc123</password>
+			<firstname>riadadmin</firstname>
+			<lastname>marzouki</lastname>
+		</admin>
+	</admins>
+	<etudiants>
+		<etudiant lastid="1">
+			<id>1</id>
+			<password>abc123</password>
+			<firstname>riadetudiant</firstname>
+			<lastname>marzouki</lastname>
+			<inscriptions>
+				<inscription>
+					<semester id="1"/>
+					<modules>
+						<module id="1"/>
+					</modules>
+				</inscription>
+			</inscriptions>
+		</etudiant>
+	</etudiants>
+	<modules lastid="4">
+		<module id="1" name="webservices" semesterid="1"/>
+		<module id="2" name="nlp" semesterid="1"/>
+		<module id="3" name="jee" semesterid="2"/>
+		<module id="4" name="cisco" semesterid="2"/>
+	</modules>
+	<notes lastid="1">
+		<note etudiant-id="1" module-id="1" noteo="17" noter=""/>
+	</notes>
+	<semesters>
+		<semester id="1" name="S1"/>
+		<semester id="2" name="S2"/>
+		<semester id="3" name="S3"/>
+		<semester id="4" name="S4"/>
+		<semester id="5" name="S5"/>
+		<semester id="6" name="S6"/>
+	</semesters>
+</root>
