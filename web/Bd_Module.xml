@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Modules>
+    <module id="1" nom="IA" idSem="1"  ></module>
+    <module id="2" nom="Jee" idSem="1"  ></module>
+    <module id="3" nom="Crypto" idSem="1"  ></module>
+    <module id="4" nom="Englais" idSem="1"  ></module>
+    <module id="5" nom="BD" idSem="1"  ></module>
+    <module id="6" nom="IA1" idSem="1"  ></module>
+    <module id="7" nom="MR" idSem="2"  ></module>
+    <module id="8" nom="DW" idSem="2"  ></module>
+    <module id="10" nom="SD" idSem="2"  ></module>
+    <module id="11" nom="Englais" idSem="2"  ></module>
+    <module id="12" nom="Gestion" idSem="2"  ></module>
+    <module id="13" nom="DAtaMining" idSem="2"  ></module>
+</Modules>

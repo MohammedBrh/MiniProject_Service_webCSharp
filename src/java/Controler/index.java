@@ -5,8 +5,12 @@
  */
 package Controler;
 
+import Model.Etudiant;
+import Model.Traitement;
+import static com.sun.faces.facelets.util.Path.context;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,7 +27,11 @@ public class index extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         RequestDispatcher rd=request.getRequestDispatcher("/index.html");  
+        Traitement t=new Traitement();
+        String url = request.getServletContext().getRealPath("/BD.xml");
+        List<Etudiant> et=t.ReadXMLFile(url);
+        request.setAttribute("data", et); 
+         RequestDispatcher rd=request.getRequestDispatcher("/test.jsp");  
         rd.include(request, response);  
     }
 

@@ -18,7 +18,7 @@
 				<inscription>
 					<semester id="1"/>
 					<modules>
-						<module id="1"/>
+						<module id="1" name="IA"/>
 					</modules>
 				</inscription>
 			</inscriptions>

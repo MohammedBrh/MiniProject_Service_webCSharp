@@ -2,27 +2,27 @@ package Model;
 
 import java.util.*;
 
-public Inscription{
-    private int id;
+public class Inscription{
+    private int idSemister;
     private ArrayList<String> modules;
     public Inscription(){
 
     }
 
-    public Inscription(int id,ArrayList<String> modules){
+    public Inscription(int idSemister,ArrayList<String> modules){
         this.modules=modules;
-        this.id=id;
+        this.idSemister=idSemister;
     }
     public ArrayList<String> GetModules(){
-        return this.LastName;
+        return this.modules;
     }
     
     public int GetId(){
-        return this.id;
+        return this.idSemister;
     }
     
-    public void SetId(int id){
-        this.id=id;
+    public void SetId(int idSemister){
+        this.idSemister=idSemister;
     }
 
     public void  SetModules(ArrayList<String> modules){

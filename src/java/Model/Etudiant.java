@@ -4,60 +4,67 @@ import java.util.*;
 
 
 public class Etudiant {
-    Private int id;
-    Private String password;
-    Private String FirstName;
-    Private String LastName;
-    Private Inscription inscription;
+    private int id;
+    private String password;
+    private String FirstName;
+    private String LastName;
+    private Inscription inscription;
 
     public Etudiant(){
 
     }
 
-    public Etudiant(int id,String password,String FirstName,String LAstName,Inscription inscription){
-        this.id=id;
-        this.password=password;
-        this.FirstName=FirstName;
-        this.LastName=LastName;
-        this.inscription = new Inscription(inscription.GetId,inscription.getModules);
-
+    public Etudiant(int id, String password, String FirstName, String LastName, Inscription inscription) {
+        this.id = id;
+        this.password = password;
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.inscription = inscription;
     }
 
-    public int GetId(){
-        return this.id;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getFirstName() {
+        return FirstName;
+    }
+
+    public void setFirstName(String FirstName) {
+        this.FirstName = FirstName;
+    }
+
+    public String getLastName() {
+        return LastName;
+    }
+
+    public void setLastName(String LastName) {
+        this.LastName = LastName;
+    }
+
+    public Inscription getInscription() {
+        return inscription;
+    }
+
+    public void setInscription(Inscription inscription) {
+        this.inscription = inscription;
     }
     
-    public String GetPassword(){
-        return this.password;
-    }
     
-    public String GetFirstName(){
-        return this.FirstName;
-    }
-    
-    public String GetLastName(){
-        return this.LastName;
-    }
-    vv
-    public Inscription GetInscription(){
-        return this.inscription;
-    }
 
-    public void SetInscription(Inscription inscription){
-        this.inscription=inscription;
-    }
 
-    public void SetId(int id){
-        this.id=id;
-    }
-    public void SetFirstName(String FirstName){
-        this.FirstName=FirstName;
-    }
-    public void SetLastName(String LastName){
-        this.LastName=LastName;
-    }
-    public void SetPassword(String password){
-        this.password=password;
-    }
+
 
 }

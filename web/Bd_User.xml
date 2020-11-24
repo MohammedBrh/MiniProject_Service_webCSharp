@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user id="1" nom="admin" email="admin@gmail.com" cne="000" isAdmin="1"></user>
+    <user id="2" nom="user1" email="user1@gmail.com" cne="111" isAdmin="0"></user>
+    <user id="3" nom="user2" email="user2@gmail.com" cne="222" isAdmin="0"></user>
+    <user id="4" nom="user3" email="user3@gmail.com" cne="333" isAdmin="0"></user>
+    <user id="5" nom="user4" email="user4@gmail.com" cne="444" isAdmin="0"></user>
+</users>
