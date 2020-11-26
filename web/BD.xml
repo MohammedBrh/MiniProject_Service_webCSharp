@@ -3,7 +3,8 @@
 	<admins>
 		<admin>
 			<id>1</id>
-			<password>abc123</password>
+                        <email>a</email>
+			<password>a</password>
 			<firstname>riadadmin</firstname>
 			<lastname>marzouki</lastname>
 		</admin>
