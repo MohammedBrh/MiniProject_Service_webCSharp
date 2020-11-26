@@ -9,6 +9,6 @@ package models;
  *
  * @author tempo
  */
-public class Module {
+public class Note {
     
 }
