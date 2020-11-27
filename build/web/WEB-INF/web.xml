@@ -2,15 +2,23 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>Login</servlet-name>
-        <servlet-class>controllers.Login</servlet-class>
+        <servlet-class>Controler.Login</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>EtudPanel</servlet-name>
-        <servlet-class>controllers.EtudPanel</servlet-class>
+        <servlet-class>Controler.EtudPanel</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>AdminPanel</servlet-name>
-        <servlet-class>controllers.AdminPanel</servlet-class>
+        <servlet-class>Controler.AdminPanel</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetModuleSemester</servlet-name>
+        <servlet-class>Controler.GetModuleSemester</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetModuleEtude</servlet-name>
+        <servlet-class>Controler.GetModuleEtude</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -26,6 +34,14 @@
     <servlet-mapping>
         <servlet-name>AdminPanel</servlet-name>
         <url-pattern>/AdminPanel</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetModuleSemester</servlet-name>
+        <url-pattern>/GetModuleSemester</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetModuleEtude</servlet-name>
+        <url-pattern>/GetModuleEtude</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

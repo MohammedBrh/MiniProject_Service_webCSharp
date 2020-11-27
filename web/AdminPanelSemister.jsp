@@ -20,24 +20,21 @@
 
         <table border ="1" width="500" align="center"> 
             <tr bgcolor="00FF7F"> 
-                <th><b>Semester Id</b></th> 
                 <th><b>Semester Name</b></th> 
             </tr> 
-            <%-- Fetching the attributes of the request object 
-                 which was previously set by the servlet  
-                  "StudentServlet.java" 
-            --%>  
 
-            <c:forEach items="${list}" var="value">
-                <tr>
+            <%ArrayList<Semester> std = (ArrayList<Semester>) request.getAttribute("Semester");
+                    for (Semester s : std) {%> 
+            <%-- Arranging data in tabular form 
+            --%> 
+            <tr> 
+                
 
-                    <td><c:out value="${se.getId()}"/> </td> 
-                    <td><c:out value="${se.name()}"/> </td> 
-                </tr>
-            </c:forEach>
-
-
+                <td><a href = "GetModuleSemester?idSemister=+<%=s.getId()%>" ><%=s.getName()%> </a></td> 
+            </tr> 
+            <%}%> 
 
         </table>  
+
     </body>
 </html>

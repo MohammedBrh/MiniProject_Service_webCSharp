@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controllers;
+package Controler;
 
 import java.io.File;
 import java.io.IOException;
@@ -53,7 +53,8 @@ public class AdminPanel extends HttpServlet {
 
             request.setAttribute("Semester", sem);
 
-            response.sendRedirect(request.getContextPath() + "/AdminPanelSemister.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("AdminPanelSemister.jsp");
+            rd.forward(request, response);
 
         } catch (Exception e) {
         }
@@ -62,9 +63,5 @@ public class AdminPanel extends HttpServlet {
 
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-    }
 
 }

@@ -14,7 +14,7 @@
     <body>
         <h1><% out.print(request.getAttribute("error_msg")); %></h1>
         <h1>Please enter your login info below</h1>
-        <form method="post">
+        <form method="post" action="Login">
             <label for="email">email </label>
             <input type="text" name="email" id="email">
             <label for="password">Password: </label>

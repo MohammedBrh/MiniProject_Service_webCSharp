@@ -27,7 +27,6 @@ public class Traitement {
     public static void main(String[] args) throws IOException {
         Traitement t = new Traitement();
         String path = new File("BD.xml").getCanonicalPath();
-        t.ReadXMLFile(path);
     }
 
     public List<User> GetUsers() {
@@ -49,36 +48,31 @@ public class Traitement {
             Document doc = db.parse(file);
             doc.getDocumentElement().normalize();
             System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
-            NodeList nodeList = doc.getElementsByTagName("etudiant");
-            NodeList nodeListSemister = doc.getElementsByTagName("semester");
-            NodeList nodeListModule = doc.getElementsByTagName("module");
-// nodeList is not iterable, so we are using for loop  
-            for (int itr = 0; itr < nodeList.getLength(); itr++) {
-                Node node = nodeList.item(itr);
-                Node nodeSemister = nodeListSemister.item(itr);
-                Node nodeModule = nodeListModule.item(itr);
-                System.out.println("\nNode Name :" + node.getNodeName());
-                if (node.getNodeType() == Node.ELEMENT_NODE) {
-                    Element eElement = (Element) node;
-                    Element eElementSemester = (Element) nodeSemister;
-                    Element eElementModule = (Element) nodeModule;
-                    System.out.println("Student id: " + eElement.getElementsByTagName("id").item(0).getTextContent());
-                    System.out.println("First Name: " + eElement.getElementsByTagName("firstname").item(0).getTextContent());
-                    System.out.println("Last Name: " + eElement.getElementsByTagName("lastname").item(0).getTextContent());
-                    ArrayList<String> modules = new ArrayList<>();
-                    for (int i = 0; i < 6; i++) {
-                        modules.add(eElementModule.getAttribute("name"));
-                    }
-                    Inscription ins = new Inscription(Integer.parseInt(eElementSemester.getAttribute("id")), modules);
+            NodeList nodeListEtudiant = doc.getElementsByTagName("etudiant");
 
-                    Etudiant et = new Etudiant(Integer.parseInt(eElementSemester.getAttribute("id")), eElementSemester.getAttribute("password"), eElementSemester.getAttribute("firstname"), eElementSemester.getAttribute("lastname"), ins);
-                    System.out.println("semester: " + eElementSemester.getAttribute("id"));
-                    System.out.println("nodeModule ");
-                    System.out.println("    id :" + eElementModule.getAttribute("id"));
-                    System.out.println("    name :" + eElementModule.getAttribute("name"));
+            List<Etudiant> etud = new ArrayList<Etudiant>();
 
-                    Etudiants.add(et);
+            for (int i = 0; i < nodeListEtudiant.getLength(); i++) {
+                Element item = (Element) nodeListEtudiant.item(i);
+
+                String id = item.getElementsByTagName("id").item(0).getTextContent();
+                String firstname = item.getElementsByTagName("firstname").item(0).getTextContent();
+                String lastname = item.getElementsByTagName("lastname").item(0).getTextContent();
+                String email = item.getElementsByTagName("email").item(0).getTextContent();
+                String NameModule = item.getAttribute("firstname");
+
+                List<Module> modu = new ArrayList<Module>();
+                NodeList nodeListModuleIns = doc.getElementsByTagName("moduleIns");
+
+                for (int j = i*6; j < (i+1)*6; j++) {
+                    Element itemModuleIns = (Element) nodeListEtudiant.item(j);
+                    String idMod=itemModuleIns.getAttribute("id");
+                    String name=itemModuleIns.getAttribute("name");
+                    
+                    modu.add(new Module(Integer.parseInt(idMod), Integer.parseInt(idMod), name));
                 }
+//                etud.add(new model.Etudiant(idMod, firstname, lastname, id, modu));
+
             }
         } catch (Exception e) {
             e.printStackTrace();

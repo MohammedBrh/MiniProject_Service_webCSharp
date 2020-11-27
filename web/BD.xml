@@ -17,9 +17,38 @@
 			<lastname>marzouki</lastname>
 			<inscriptions>
 				<inscription>
-					<semester id="1"/>
+					<semesterId id="1"/>
 					<modules>
-						<module id="1" name="IA"/>
+						<moduleIns id="1" name="webservices"/>
+					</modules>
+				</inscription>
+                                
+				<inscription>
+					<semesterId id="2"/>
+					<modules>
+						<moduleIns id="3" name="jee"/>
+					</modules>
+				</inscription>
+			</inscriptions>
+		</etudiant>
+                
+		<etudiant lastid="1">
+			<id>2</id>
+			<password>abc123</password>
+			<firstname>Medetudiant</firstname>
+			<lastname>Benrabeh</lastname>
+			<inscriptions>
+				<inscription>
+					<semesterId id="2"/>
+					<modules>
+						<moduleIns id="1" name="webservices"/>
+					</modules>
+				</inscription>
+                                
+				<inscription>
+					<semesterId id="2"/>
+					<modules>
+						<moduleIns id="3" name="jee"/>
 					</modules>
 				</inscription>
 			</inscriptions>
@@ -30,9 +59,22 @@
 		<module id="2" name="nlp" semesterid="1"/>
 		<module id="3" name="jee" semesterid="2"/>
 		<module id="4" name="cisco" semesterid="2"/>
+		<module id="5" name="PHP" semesterid="2"/>
+		<module id="6" name="C" semesterid="2"/>
 	</modules>
 	<notes lastid="1">
 		<note etudiant-id="1" module-id="1" noteo="17" noter=""/>
+		<note etudiant-id="1" module-id="2" noteo="13" noter=""/>
+		<note etudiant-id="1" module-id="3" noteo="12" noter=""/>
+		<note etudiant-id="1" module-id="4" noteo="2" noter="12"/>
+		<note etudiant-id="1" module-id="5" noteo="13" noter=""/>
+		<note etudiant-id="1" module-id="6" noteo="13" noter=""/>
+		<note etudiant-id="2" module-id="1" noteo="1" noter="11"/>
+		<note etudiant-id="2" module-id="2" noteo="13" noter=""/>
+		<note etudiant-id="2" module-id="3" noteo="17" noter=""/>
+		<note etudiant-id="2" module-id="4" noteo="13" noter=""/>
+		<note etudiant-id="2" module-id="5" noteo="17" noter=""/>
+		<note etudiant-id="2" module-id="6" noteo="13" noter=""/>
 	</notes>
 	<semesters>
 		<semester id="1" name="S1"/>
