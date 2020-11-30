@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package Model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +28,13 @@ public class Etudiant {
         this.password = password;
         this.nom = nom;
         this.Module = Module;
+        
+    }
+    public Etudiant(int id, String prenom, String password, String nom) {
+        this.id = id;
+        this.prenom = prenom;
+        this.password = password;
+        this.nom = nom;
         
     }
 

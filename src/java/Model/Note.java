@@ -13,6 +13,14 @@ public class Note {
     private int noteR;
     private int noteO;
     private String EtudiantName;
+    private String moduleName;
+
+    public Note(int noteR, int noteO, String EtudiantName, String moduleName) {
+        this.noteR = noteR;
+        this.noteO = noteO;
+        this.EtudiantName = EtudiantName;
+        this.moduleName = moduleName;
+    }
 
     public Note() {
     }
@@ -31,6 +39,22 @@ public class Note {
         this.noteR = noteR;
     }
 
+    public String getEtudiantName() {
+        return EtudiantName;
+    }
+
+    public void setEtudiantName(String EtudiantName) {
+        this.EtudiantName = EtudiantName;
+    }
+
+    public String getModuleName() {
+        return moduleName;
+    }
+
+    public void setModuleName(String moduleName) {
+        this.moduleName = moduleName;
+    }
+
     public int getNoteO() {
         return noteO;
     }
@@ -40,7 +64,7 @@ public class Note {
     }
 
     public String getNamModule() {
-        return EtudiantName;
+        return moduleName;
     }
 
     public void setNamModule(String EtudiantName) {

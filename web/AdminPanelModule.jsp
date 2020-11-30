@@ -4,6 +4,7 @@
     Author     : Mohammed
 --%>
 
+<%@page import="Model.Etudiant"%>
 <%@page import="Model.Module"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.ArrayList"%>
@@ -20,17 +21,17 @@
         
           <table border ="1" width="500" align="center"> 
             <tr bgcolor="00FF7F"> 
-                <th><b>Semester Name</b></th> 
+                <th><b>Etudiant Name</b></th> 
             </tr> 
 
-            <%ArrayList<Module> std = (ArrayList<Module>) request.getAttribute("Modules");
-                    for (Module s : std) {%> 
+            <%ArrayList<Etudiant> std = (ArrayList<Etudiant>) request.getAttribute("etudiant");
+                    for (Etudiant s : std) {%> 
             <%-- Arranging data in tabular form 
             --%> 
             <tr> 
                 
 
-                <td><a href = "GetModuleEtude?idModule=+<%=s.getId()%>" ><%=s.getName()%> </a></td> 
+                <td><a href = "GetRelvetEtude?idEtudiant=+<%=s.getId()%>" ><%=s.getNom()+" "+s.getPrenom()%> </a></td> 
             </tr> 
             <%}%> 
 

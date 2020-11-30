@@ -2,19 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/G:/TP/ProjectServiceWeb/MiniProject_Service_webCSharp/web/WEB-INF/web.xml</file>
-            <file>file:/G:/TP/ProjectServiceWeb/MiniProject_Service_webCSharp/src/java/Controler/Login.java</file>
-            <file>file:/G:/TP/ProjectServiceWeb/MiniProject_Service_webCSharp/src/java/Controler/EtudPanel.java</file>
-            <file>file:/G:/TP/ProjectServiceWeb/MiniProject_Service_webCSharp/src/java/Controler/AdminPanel.java</file>
-            <file>file:/G:/TP/ProjectServiceWeb/MiniProject_Service_webCSharp/src/java/Controler/GetModuleSemester.java</file>
-            <file>file:/G:/TP/ProjectServiceWeb/MiniProject_Service_webCSharp/src/java/Model/Etudiant.java</file>
-            <file>file:/G:/TP/ProjectServiceWeb/MiniProject_Service_webCSharp/src/java/Model/Traitement.java</file>
-            <file>file:/G:/TP/ProjectServiceWeb/MiniProject_Service_webCSharp/web/AdminPanelModule.jsp</file>
-            <file>file:/G:/TP/ProjectServiceWeb/MiniProject_Service_webCSharp/src/java/Controler/Admin.java</file>
-            <file>file:/G:/TP/ProjectServiceWeb/MiniProject_Service_webCSharp/web/BD.xml</file>
-            <file>file:/G:/TP/ProjectServiceWeb/MiniProject_Service_webCSharp/src/java/Model/Module.java</file>
-            <file>file:/G:/TP/ProjectServiceWeb/MiniProject_Service_webCSharp/src/java/Controler/GetModuleEtude.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

@@ -20,6 +20,14 @@
         <servlet-name>GetModuleEtude</servlet-name>
         <servlet-class>Controler.GetModuleEtude</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetRelvetEtude</servlet-name>
+        <servlet-class>Controler.GetRelvetEtude</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DownloadServlet</servlet-name>
+        <servlet-class>Controler.DownloadServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -42,6 +50,14 @@
     <servlet-mapping>
         <servlet-name>GetModuleEtude</servlet-name>
         <url-pattern>/GetModuleEtude</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetRelvetEtude</servlet-name>
+        <url-pattern>/GetRelvetEtude</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DownloadServlet</servlet-name>
+        <url-pattern>/DownloadServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

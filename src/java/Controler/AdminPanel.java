@@ -5,6 +5,7 @@
  */
 package Controler;
 
+import Model.Module;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -41,6 +42,7 @@ public class AdminPanel extends HttpServlet {
             Document doc = db.parse(file);
             doc.getDocumentElement().normalize();
             NodeList nodeListSemister = doc.getElementsByTagName("semester");
+            NodeList nodeList = doc.getElementsByTagName("module");
 
             for (int i = 0; i < nodeListSemister.getLength(); i++) {
                 Element item = (Element) nodeListSemister.item(i);
@@ -50,6 +52,20 @@ public class AdminPanel extends HttpServlet {
                 System.out.println(name + " -- " + IdSemister);
                 sem.add(new Semester(Integer.parseInt(IdSemister), name));
             }
+
+            List<Module> mod = new ArrayList<Module>();
+            for (int i = 0; i < nodeList.getLength(); i++) {
+                Element item = (Element) nodeList.item(i);
+                String NameModule = item.getAttribute("name");
+                int semesterid = Integer.parseInt(item.getAttribute("semesterid"));
+                int id = Integer.parseInt(item.getAttribute("id"));
+
+
+                    mod.add(new Module(id, semesterid, NameModule));
+
+            }
+
+            request.setAttribute("Modules", mod);
 
             request.setAttribute("Semester", sem);
 
@@ -62,6 +78,5 @@ public class AdminPanel extends HttpServlet {
         String uid = (String) request.getAttribute("uid");
 
     }
-
 
 }

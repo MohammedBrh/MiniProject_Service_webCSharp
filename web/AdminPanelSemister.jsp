@@ -4,6 +4,7 @@
     Author     : tempo
 --%>
 
+<%@page import="Model.Module"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="models.Semester"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -31,6 +32,24 @@
                 
 
                 <td><a href = "GetModuleSemester?idSemister=+<%=s.getId()%>" ><%=s.getName()%> </a></td> 
+            </tr> 
+            <%}%> 
+
+        </table>  
+
+        <table border ="1" width="500" align="center"> 
+            <tr bgcolor="00FF7F"> 
+                <th><b>Module Name</b></th> 
+            </tr> 
+
+            <%ArrayList<Module> stdM = (ArrayList<Module>) request.getAttribute("Modules");
+                    for (Module s : stdM) {%> 
+            <%-- Arranging data in tabular form 
+            --%> 
+            <tr> 
+                
+
+                <td><a href = "GetModuleEtude?idModule=+<%=s.getId()%>" ><%=s.getName()%> </a></td> 
             </tr> 
             <%}%> 
 
